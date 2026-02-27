@@ -1,0 +1,13 @@
+services:
+  - type: static
+    name: nossa-historia
+    env: static
+    # Optional: set your repo here if you want Render to auto-deploy from git
+    # repo: https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+    branch: main
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    # Build-time environment variables (leave empty here; set secrets in the Render dashboard)
+    envVars:
+      - key: GEMINI_API_KEY
+        value: ""
