@@ -1,11 +1,11 @@
 services:
-  - type: static
+  - type: web
     name: nossa-historia
-    env: static
+    env: node
     repo: https://github.com/armazempreta13/nossahist.git
     branch: main
     buildCommand: npm install && npm run build
-    staticPublishPath: dist
+    startCommand: npm start
     # Build-time environment variables (leave empty here; set secrets in the Render dashboard)
     envVars:
       - key: GEMINI_API_KEY
